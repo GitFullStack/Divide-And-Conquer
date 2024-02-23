@@ -10,7 +10,11 @@ function sortedFrequency(arr, val) {
         } else if (mdVal > val) {
             rtIdx = mdIdx - 1
         } else {
+            //if the execution gets here it means that the value of arr[mdIdx] is equal to val
             frequency++;
+
+            //However, values might also be found at index less than mdIdx and greater than mdIdx
+           
             if (arr[mdIdx - 1] == val) {                             
                 cnt1 = mdIdx - 1;
                 while (cnt1>=0) {    
